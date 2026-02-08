@@ -1,8 +1,6 @@
-import { BlobStorageClient } from "./blob-client.js";
-import { assertFileSize, extractBody } from "./validation.js";
-import type { ProviderConfig, StrapiFile, StrapiUploadProvider } from "./types.js";
-
-export type { ProviderConfig, StrapiFile, StrapiUploadProvider };
+import { BlobStorageClient } from "./blob-client";
+import { assertFileSize, extractBody } from "./validation";
+import type { ProviderConfig, StrapiFile, StrapiUploadProvider } from "./types";
 
 /**
  * Initialises the Vercel Blob upload provider for Strapi.
@@ -53,6 +51,8 @@ function createProvider(config: ProviderConfig): StrapiUploadProvider {
   };
 }
 
-export default {
+const provider = {
   init: createProvider,
 };
+
+export = provider;

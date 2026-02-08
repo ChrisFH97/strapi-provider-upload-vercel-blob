@@ -1,6 +1,6 @@
 import { put, del } from "@vercel/blob";
 import type { Readable } from "node:stream";
-import type { ProviderConfig, StrapiFile } from "./types.js";
+import type { ProviderConfig, StrapiFile } from "./types";
 
 /** Default edge / browser cache lifetime – 1 year in seconds. */
 const DEFAULT_CACHE_MAX_AGE = 31_536_000;

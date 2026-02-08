@@ -1,5 +1,5 @@
 import type { Readable } from "node:stream";
-import type { StrapiFile } from "./types.js";
+import type { StrapiFile } from "./types";
 
 /** Default upper limit for uploads – Vercel Blob caps at 500 MB. */
 const DEFAULT_MAX_UPLOAD_MB = 500;
