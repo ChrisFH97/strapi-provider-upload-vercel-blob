@@ -56,3 +56,7 @@ function createProvider(config: ProviderConfig): StrapiUploadProvider {
 export default {
   init: createProvider,
 };
+
+// Strapi requires `require('provider').init` to be accessible at the top level
+// in CommonJS. This named export ensures `init` is directly on `module.exports`.
+export const init = createProvider;
